@@ -1,7 +1,0 @@
-{
-  "androidNdkHomeEnvironmentVariable": "/usr/local/android/ndk/21.3.6528147/",
-  "sdkFolder": "/usr/local/android",
-  "sideBySideNdkFolderNames": [
-    "21.3.6528147"
-  ]
-}

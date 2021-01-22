@@ -1,7 +1,0 @@
-Executable : /usr/local/android/cmake/3.10.2.4988404/bin/ninja
-arguments : 
--C
-/root/workspace/4Beats/android/app/.cxx/cmake/debug/armeabi-v7a
-native-lib
-jvmArgs : 
-
