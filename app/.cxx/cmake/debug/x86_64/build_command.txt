@@ -1,0 +1,22 @@
+Executable : /usr/local/android/cmake/3.10.2.4988404/bin/cmake
+arguments : 
+-H/root/workspace/4Beats/android/app
+-DCMAKE_CXX_FLAGS=-std=c++14
+-DCMAKE_FIND_ROOT_PATH=/root/workspace/4Beats/android/app/.cxx/cmake/debug/prefab/x86_64/prefab
+-DCMAKE_BUILD_TYPE=Debug
+-DCMAKE_TOOLCHAIN_FILE=/usr/local/android/ndk/22.0.7026061/build/cmake/android.toolchain.cmake
+-DANDROID_ABI=x86_64
+-DANDROID_NDK=/usr/local/android/ndk/22.0.7026061
+-DANDROID_PLATFORM=android-26
+-DCMAKE_ANDROID_ARCH_ABI=x86_64
+-DCMAKE_ANDROID_NDK=/usr/local/android/ndk/22.0.7026061
+-DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+-DCMAKE_LIBRARY_OUTPUT_DIRECTORY=/root/workspace/4Beats/android/app/build/intermediates/cmake/debug/obj/x86_64
+-DCMAKE_MAKE_PROGRAM=/usr/local/android/cmake/3.10.2.4988404/bin/ninja
+-DCMAKE_SYSTEM_NAME=Android
+-DCMAKE_SYSTEM_VERSION=26
+-B/root/workspace/4Beats/android/app/.cxx/cmake/debug/x86_64
+-GNinja
+jvmArgs : 
+
+Build command args:
