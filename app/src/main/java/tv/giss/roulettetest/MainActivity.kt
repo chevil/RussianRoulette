@@ -10,6 +10,8 @@ import androidx.fragment.app.FragmentTransaction
 import androidx.fragment.app.FragmentActivity
 
 import android.os.Bundle 
+import android.os.Handler 
+import android.os.Looper 
 import android.content.Context
 import android.util.Log
 import android.widget.Toast
@@ -48,7 +50,13 @@ class MainActivity : FragmentActivity() {
 
        // action for shoot button
        shoot.setOnClickListener {
-          wheel.rotate( (0..(rouletteSections.size-1)).random(), true );
+          wheel.rotate( (0..(rouletteSections.size-1)).random(), true) { res -> 
+                               Log.v( this::class.simpleName, "Wheel Positon : " + res)
+                               if ( res == 4 )  { 
+                                  ape.setVisibility( View.VISIBLE )
+                                  Handler(getMainLooper()).postDelayed( { ape.setVisibility( View.GONE ) }, 5000 )
+                               }
+                            }
        }
     }
 

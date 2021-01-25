@@ -108,10 +108,9 @@ final class RouletteView(context : Context, attrs : AttributeSet?) : View( conte
      * @param n : number od sections to rotate
      * @param clockwise : rotate clock-wise or not
      */
-    public fun rotate(n : Int, clockwise : Boolean) {
+    public fun rotate(n : Int, clockwise : Boolean, callback : (res : Int?) -> Unit) {
 
         var rotation : Float 
-
         if (mMoving) return;
 
         if ( clockwise )
@@ -119,7 +118,7 @@ final class RouletteView(context : Context, attrs : AttributeSet?) : View( conte
         else
            rotation = -n.toFloat()*(360.0f / mRouletteSections.size.toFloat()) - 3*360;
 
-        actual = n
+        actual = (actual+n) % mRouletteSections.size
 
         Log.v( this::class.simpleName, "Rotation angle : " + rotation )
         var DEFAULT_ROTATION_TIME : Long = 1000;
@@ -134,6 +133,7 @@ final class RouletteView(context : Context, attrs : AttributeSet?) : View( conte
                     public override fun onAnimationEnd(animation : Animator) {
                        mMoving = false
                        clearAnimation()
+                       callback.invoke(actual)
                     }
 
                     public override fun onAnimationCancel(animation : Animator) {

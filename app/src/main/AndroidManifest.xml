@@ -6,11 +6,13 @@
       android:icon="@mipmap/roulette"
       android:roundIcon="@mipmap/rouletteround"
       android:allowBackup="true"
+      android:orientation="vertical"
       android:theme="@style/AppTheme">
       <activity
         android:name=".MainActivity"
         android:label="@string/app_name"
-        android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
+        android:configChanges="keyboard|keyboardHidden|screenSize|uiMode"
+        android:orientation="vertical"
         android:launchMode="singleTask"
         android:windowSoftInputMode="adjustResize">
         <intent-filter>

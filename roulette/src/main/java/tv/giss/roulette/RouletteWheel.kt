@@ -50,8 +50,8 @@ class RouletteWheel(context : Context, attrs : AttributeSet?) : FrameLayout(cont
      * @param n : number of sections to rotate
      * @param clockwise : clockwise or not
      */
-    public fun rotate(n : Int, clockwise : Boolean) {
-        roulette.rotate(n, clockwise)
+    public fun rotate(n : Int, clockwise : Boolean, callback : (res: Int?) -> Unit) {
+        roulette.rotate(n, clockwise, callback)
     }
 
     public override fun onTouch(v : View, event : MotionEvent) : Boolean {
@@ -80,7 +80,7 @@ class RouletteWheel(context : Context, attrs : AttributeSet?) : FrameLayout(cont
                    else
                      forward = false;
                 }
-                rotate((0..(nbSections-1)).random(), forward)
+                rotate((0..(nbSections-1)).random(), forward){ res -> Log.v( this::class.simpleName, "Wheel Auto : " + res ) }
             }
         }
         return true

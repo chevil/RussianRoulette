@@ -16,6 +16,16 @@
         android:background="@android:color/black"
     />
 
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/ape"
+        android:scaleType="fitXY"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:src="@drawable/ape"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+    />
+
     <Button
         android:id="@+id/shoot"
         android:layout_width="match_parent"
